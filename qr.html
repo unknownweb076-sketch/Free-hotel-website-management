@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Table QR codes</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;padding:20px;background:#fff;color:#111}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+button,input{font:inherit;padding:8px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{border:1px solid #bbb;border-radius:12px;padding:16px;text-align:center;break-inside:avoid}
+.card h2{margin:0 0 4px;font-size:1.6rem} .card p{margin:0 0 10px;color:#444;font-size:.85rem}
+.qr{display:flex;justify-content:center;min-height:180px}
+@media print{header{display:none}body{padding:0}}
+</style></head><body>
+<header><h1 style="margin:0;font-size:1.3rem">Table QR codes</h1>
+<label>Tables <input id="n" type="number" min="1" max="60" value="12" style="width:80px"></label>
+<button id="go">Update</button><button id="pr">Print</button></header>
+<div class="grid" id="grid"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="/qr.js"></script>
+</body></html>
